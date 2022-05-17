@@ -1,0 +1,15 @@
+{
+    "themeColor":"#DB1962 !important",
+    "themeSecondaryColor":"#055076 !important",
+    "themeFontFamily":"Open Sans !important",
+    "fontPrimaryColor": "#424242 !important",
+    "fontSecondaryColor": "#727272 !important",
+    "bodyBackground":"rgba(244, 244, 244, 1) !important",
+    "optionsColor": "#F5F5F6 !important",
+    "optionSelectedBgColor":"rgba(219,26,97,0.1) !important",
+    "boxShadow":"rgba(0,0,0,0.5) !important",
+    "progressbarthemeColor": "#c8c8c8 !important",
+    "whitecolor": "#FFF !important",
+    "newPrimaryColor" : "#ec1c24",
+    "newSecondaryColor" : "#055076"
+}

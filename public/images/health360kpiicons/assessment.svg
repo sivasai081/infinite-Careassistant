@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.758" height="28.824" viewBox="0 0 25.758 28.824">
+  <defs>
+    <path id="path-1" fill-rule="evenodd" d="M7.71972656 3h6.8791504l5.15930175 5.04718018v10.09439086c0 .9253235-.77380371 1.68240357-1.71972656 1.68240357H7.71118165C6.76525878 19.8239746 6 19.06689453 6 18.14157104l.00854492-13.45916748C6.00854492 3.75708008 6.77392578 3 7.71972656 3zm6.01928711 1.2618103v4.62658692h4.72937012L13.73901367 4.2618103zm2.57971192 8.83258057h-6.8791504V11.4119873h6.8791504v1.68240357zM9.43957519 16.459198h6.8791504v-1.68240357h-6.8791504V16.459198z"/>
+    <filter id="filter-2" width="200%" height="200%" x="-50%" y="-50%" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="3" in="SourceAlpha" result="shadow-1-feOffset-shadow"/>
+      <feGaussianBlur in="shadow-1-feOffset-shadow" result="shadow-1-feGaussianBlur-shadow" stdDeviation="3.614"/>
+      <feColorMatrix in="shadow-1-feGaussianBlur-shadow" result="shadow-1-feColorMatrix-shadow" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.1607843137254902 0"/>
+    </filter>
+  </defs>
+  <g>
+    <use fill="black" stroke="black" stroke-opacity="0" stroke-width="0" filter="url(#filter-2)" xlink:href="#path-1"/>
+    <use fill="rgb(255,255,255)" xlink:href="#path-1"/>
+  </g>
+</svg>

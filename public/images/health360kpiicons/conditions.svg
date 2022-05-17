@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.011" height="29.011" viewBox="0 0 29.011 29.011">
+  <defs>
+    <path id="path-1" fill-rule="evenodd" d="M14.5054779 3c.93560792 0 1.70109559.76550293 1.70109559 1.70108032v13.60873413c0 .93560791-.76550293 1.70108033-1.70109558 1.70108033-.93560791 0-1.70109559-.76547242-1.70109559-1.70108033V4.70108032C12.80438232 3.76550293 13.56987 3 14.50547791 3zM7.70109559 8.10327148h.24301148c.93559265 0 1.70109558.76550293 1.70109558 1.70108033v8.50546264c0 .93560791-.76550293 1.70108033-1.70109558 1.70108033h-.24301148C6.76548768 20.01089478 6 19.24542236 6 18.30981445V9.80435181c0-.9355774.76548767-1.70108033 1.70109558-1.70108033zm15.30984497 6.31832886c0-.9355774-.76550293-1.70108032-1.70109558-1.70108032-.9356079 0-1.70109558.76550293-1.70109558 1.70108032v3.88821411c0 .93560791.76548767 1.70108033 1.70109558 1.70108033.93559265 0 1.70109558-.76547242 1.70109558-1.70108033v-3.8882141z"/>
+    <filter id="filter-2" width="200%" height="200%" x="-50%" y="-50%" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="3" in="SourceAlpha" result="shadow-1-feOffset-shadow"/>
+      <feGaussianBlur in="shadow-1-feOffset-shadow" result="shadow-1-feGaussianBlur-shadow" stdDeviation="3.614"/>
+      <feColorMatrix in="shadow-1-feGaussianBlur-shadow" result="shadow-1-feColorMatrix-shadow" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.34901960784313724 0"/>
+    </filter>
+  </defs>
+  <g>
+    <use fill="black" stroke="black" stroke-opacity="0" stroke-width="0" filter="url(#filter-2)" xlink:href="#path-1"/>
+    <use fill="rgb(255,255,255)" xlink:href="#path-1"/>
+  </g>
+</svg>

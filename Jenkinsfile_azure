@@ -1,0 +1,49 @@
+#!groovy
+pipeline { 
+    environment { 
+        registry = "https://healthlligence.azurecr.io" 
+        registryCredential = 'acrauth' 
+    }
+    agent any 
+    stages { 
+        stage('Cloning our Git') { 
+            steps { 
+                git branch: 'SqlCareassistantWebMDB',
+                    credentialsId: 'careassistantgit',
+                    url: 'https://healthlligencemvp@dev.azure.com/healthlligencemvp/careassistant.ai/_git/careassistant.ai'  
+                
+                contentReplace(configs: [fileContentReplaceConfig(configs: [fileContentReplaceItemConfig(matchCount: 0, replace: 'API_BASEURL=http://172.18.0.4:8090/', search: '^API_BASEURL.*')], fileEncoding: 'UTF-8', filePath: './.env')])          
+            }
+        } 
+        stage('Building our image') { 
+            steps { 
+                script { 
+                    app = docker.build("healthlligence/careassistant-azure","--network host ./")
+                }
+            } 
+        }
+        stage('Deploy Image') { 
+            steps { 
+                script { 
+                    docker.withRegistry(registry, registryCredential) {
+                        app.push("${env.BUILD_NUMBER}")
+                        app.push("latest")
+                    }
+                } 
+            }
+        } 
+        
+    }
+    post {
+        success {
+          mail to: 'kumar@healthlligence.com,poornima@healthlligence.com, eugene@healthlligence.com, david@healthlligence.com, sivasai.mantena@infinite.com',
+          subject: "${BUILD_TAG} : ${currentBuild.currentResult}",
+          body: "result: ${currentBuild.currentResult}"            
+        }
+        failure {
+          mail to: 'kumar@healthlligence.com,poornima@healthlligence.com, eugene@healthlligence.com, david@healthlligence.com, sivasai.mantena@infinite.com',
+          subject: "${BUILD_TAG} : ${currentBuild.currentResult}",
+          body: "Something went wrong, please check log for error details." 
+        }
+    }
+}
